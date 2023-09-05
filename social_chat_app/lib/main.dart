@@ -37,6 +37,21 @@ class MyApp extends StatelessWidget {
               child: Text('Login'),
             ),
             Text('or Sign in with'),
+            ElevatedButton(
+              onPressed: () {
+                print('Google is clicked');
+              },
+              child: Row(
+                children: [
+                  Image.asset(
+                    'assets/images/google.png',
+                    width: 20,
+                    height: 20,
+                  ),
+                  Text('Login with Google'),
+                ],
+              ),
+            ),
           ],
         ),
       ),
