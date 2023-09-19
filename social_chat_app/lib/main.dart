@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Urbanist',
         scaffoldBackgroundColor: AppColors.background,
       ),
+      debugShowCheckedModeBanner: false, // remove debug banner
       home: LoginPage(),
     );
   }
 }
-

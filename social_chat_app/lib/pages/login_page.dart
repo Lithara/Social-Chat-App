@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home_page.dart';
+
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
@@ -66,9 +68,7 @@ class LoginPage extends StatelessWidget {
                     style: TextButton.styleFrom(
                       foregroundColor: Colors.white,
                     ),
-                    child: const Text(
-                      'Forgot Password?'
-                    ),
+                    child: const Text('Forgot Password?'),
                   ),
                 ),
                 SizedBox(
@@ -79,21 +79,24 @@ class LoginPage extends StatelessWidget {
                   height: 40,
                   child: ElevatedButton(
                     onPressed: () {
-                      print('Login is clicked');
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) {
+                          return const HomePage();
+                        }),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.amber,
-                      foregroundColor: Colors.black
-                    ),
+                        backgroundColor: Colors.amber,
+                        foregroundColor: Colors.black),
                     child: const Text('Login'),
                   ),
                 ),
                 Spacer(),
                 const Text(
                   'or Sign in with',
-                   style: TextStyle(
-                     color: Colors.white,
-                   ),
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
                 ),
                 const SizedBox(
                   height: 16,
