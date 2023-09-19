@@ -15,9 +15,10 @@ class HomePage extends StatelessWidget {
             Icon(Icons.location_on_outlined),
           ],
         ),
-        body: Column(
+        body: ListView(
           children: mockUsersFromServer(),
-        ));
+        ),
+    );
   }
 
   Widget _useritem() {
