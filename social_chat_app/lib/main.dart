@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:social_chat_app/pages/login_page.dart';
 import 'package:social_chat_app/styles/app_colors.dart';
 
+import 'pages/home_page.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -16,6 +18,11 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false, // remove debug banner
       home: LoginPage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => LoginPage(),
+        '/home': (context) => HomePage(),
+      },
     );
   }
 }
