@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:social_chat_app/pages/login_page.dart';
+import 'package:social_chat_app/pages/main_page.dart';
 import 'package:social_chat_app/styles/app_colors.dart';
 
 import 'pages/home_page.dart';
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/home': (context) => HomePage(),
+        '/main': (context) => MainPage(),
       },
     );
   }

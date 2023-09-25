@@ -71,7 +71,7 @@ class LoginPage extends StatelessWidget {
                     child: const Text('Forgot Password?'),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 32,
                 ),
                 SizedBox(
@@ -79,7 +79,7 @@ class LoginPage extends StatelessWidget {
                   height: 40,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.of(context).pushNamed('/home');
+                      Navigator.of(context).pushReplacementNamed('/main');
                     },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.amber,
@@ -87,7 +87,7 @@ class LoginPage extends StatelessWidget {
                     child: const Text('Login'),
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 const Text(
                   'or Sign in with',
                   style: TextStyle(
