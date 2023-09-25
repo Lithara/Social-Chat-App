@@ -8,6 +8,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  int currentndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,8 +43,11 @@ class _MainPageState extends State<MainPage> {
             label: 'Add Post',
           ),
         ],
+        currentIndex: currentndex,
         onTap: (index){
-          
+          setState(() {
+            currentndex = index;
+          });
         },
         showSelectedLabels: false,
         showUnselectedLabels: false,

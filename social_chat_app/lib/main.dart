@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: AppColors.background,
       ),
       debugShowCheckedModeBanner: false, // remove debug banner
-      home: TestPage(),
+      home: LoginPage(),
       //initialRoute: '/',
       routes: {
         '/home': (context) => HomePage(),
