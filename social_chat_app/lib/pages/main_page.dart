@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MainPage extends StatelessWidget {
+class MainPage extends StatefulWidget {
   const MainPage({super.key});
 
+  @override
+  State<MainPage> createState() => _MainPageState();
+}
+
+class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,6 +42,9 @@ class MainPage extends StatelessWidget {
             label: 'Add Post',
           ),
         ],
+        onTap: (index){
+          
+        },
         showSelectedLabels: false,
         showUnselectedLabels: false,
         backgroundColor: Colors.amber,
