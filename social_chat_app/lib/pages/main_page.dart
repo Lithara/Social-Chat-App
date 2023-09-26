@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:social_chat_app/pages/home_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -12,35 +14,32 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Bottom Navigation Container'
-        ),
-      ),
-      body: const Center(
-        child: Text(
-          'Center Text'
-        ),
-      ),
+      body: HomePage(),
       bottomNavigationBar: BottomNavigationBar(
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
+            icon: SvgPicture.asset(
+              'assets/svg/homeIcon.svg',
             ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.favorite,
+            icon: SvgPicture.asset(
+              'assets/svg/favoriteIcon.svg',
             ),
             label: 'Favorite',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.add,
+            icon: SvgPicture.asset(
+              'assets/svg/msgIcon.svg',
             ),
-            label: 'Add Post',
+            label: 'Message',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              'assets/svg/profileIcon.svg',
+            ),
+            label: 'User',
           ),
         ],
         currentIndex: currentndex,
@@ -49,6 +48,7 @@ class _MainPageState extends State<MainPage> {
             currentndex = index;
           });
         },
+        type: BottomNavigationBarType.fixed,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         backgroundColor: Colors.amber,
