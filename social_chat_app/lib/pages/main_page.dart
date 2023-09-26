@@ -14,45 +14,60 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: HomePage(),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/svg/homeIcon.svg',
+        body: pages[currentndex],
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(
+                'assets/svg/homeIcon.svg',
+              ),
+              label: 'Home',
             ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/svg/favoriteIcon.svg',
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(
+                'assets/svg/favoriteIcon.svg',
+              ),
+              label: 'Favorite',
             ),
-            label: 'Favorite',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/svg/msgIcon.svg',
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(
+                'assets/svg/msgIcon.svg',
+              ),
+              label: 'Message',
             ),
-            label: 'Message',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/svg/profileIcon.svg',
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(
+                'assets/svg/profileIcon.svg',
+              ),
+              label: 'User',
             ),
-            label: 'User',
-          ),
-        ],
-        currentIndex: currentndex,
-        onTap: (index){
-          setState(() {
-            currentndex = index;
-          });
-        },
-        type: BottomNavigationBarType.fixed,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        backgroundColor: Colors.amber,
-      )
-    );
+          ],
+          currentIndex: currentndex,
+          onTap: (index) {
+            setState(() {
+              currentndex = index;
+            });
+          },
+          type: BottomNavigationBarType.fixed,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          backgroundColor: Colors.amber,
+        ));
   }
+
+  final pages = [
+    HomePage(),
+    Center(
+      child: Text('Favorite'),
+    ),
+    Center(
+      child: Text('Add Post'),
+    ),
+    Center(
+      child: Text('Message'),
+    ),
+    Center(
+      child: Text('User'),
+    ),
+  ];
 }
