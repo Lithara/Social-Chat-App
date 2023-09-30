@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:social_chat_app/styles/app_colors.dart';
+import 'package:social_chat_app/styles/app_text.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -32,8 +33,9 @@ class HomePage extends StatelessWidget {
         const SizedBox(
           width: 16,
         ),
-        const Text(
+        Text(
           'Sarah Fernandez',
+          style: AppText.subtitle3,
         )
       ],
     );
@@ -47,3 +49,5 @@ class HomePage extends StatelessWidget {
     return users;
   }
 }
+
+// 3:16:05
