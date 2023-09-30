@@ -6,20 +6,24 @@ class Postitem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
       children: [
-        Image.asset(
-          'assets/temp/Image.png',
-          width: 40,
-          height: 40,
+        Row(
+          children: [
+            Image.asset(
+              'assets/temp/Image.png',
+              width: 40,
+              height: 40,
+            ),
+            const SizedBox(
+              width: 16,
+            ),
+            Text(
+              'Sarah Fernandez',
+              style: AppText.subtitle3,
+            )
+          ],
         ),
-        const SizedBox(
-          width: 16,
-        ),
-        Text(
-          'Sarah Fernandez',
-          style: AppText.subtitle3,
-        )
       ],
     );
   }
