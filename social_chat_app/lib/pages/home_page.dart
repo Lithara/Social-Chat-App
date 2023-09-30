@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:social_chat_app/components/post_item.dart';
 import 'package:social_chat_app/styles/app_colors.dart';
 import 'package:social_chat_app/styles/app_text.dart';
 
@@ -22,14 +23,10 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget _useritem() {
-    
-  }
-
   List<Widget> mockUsersFromServer() {
     List<Widget> users = [];
     for (var i = 0; i < 1000; i++) {
-      users.add(_useritem());
+      users.add(Postitem());
     }
     return users;
   }

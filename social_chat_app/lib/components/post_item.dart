@@ -6,7 +6,6 @@ class Postitem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MediaQuery.of(context).size;
     return Row(
       children: [
         Image.asset(
