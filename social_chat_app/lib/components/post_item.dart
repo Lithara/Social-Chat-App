@@ -24,6 +24,7 @@ class Postitem extends StatelessWidget {
             )
           ],
         ),
+        Image.asset('assets/temp/post1.jpg'),
       ],
     );
   }
