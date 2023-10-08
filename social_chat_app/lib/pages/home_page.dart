@@ -4,10 +4,13 @@ import 'package:social_chat_app/styles/app_colors.dart';
 import 'package:social_chat_app/styles/app_text.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
+
+  List<String> users = [];
 
   @override
   Widget build(BuildContext context) {
+    mockUsersFromServer();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.background,
@@ -17,17 +20,25 @@ class HomePage extends StatelessWidget {
           Icon(Icons.location_on_outlined),
         ],
       ),
-      body: ListView(
-        children: mockUsersFromServer(),
+      body: ListView.separated(
+        itemBuilder: (context, index) {
+          return Postitem(
+            user: users[index],
+          );
+        },
+        itemCount: users.length,
+        separatorBuilder: (BuildContext context, int index) {
+          return SizedBox(
+            height: 24,
+          );
+        },
       ),
     );
   }
 
-  List<Widget> mockUsersFromServer() {
-    List<Widget> users = [];
-    for (var i = 0; i < 1000; i++) {
-      users.add(Postitem());
+  mockUsersFromServer() {
+    for (var i = 0; i < 100; i++) {
+      users.add('User number $i');
     }
-    return users;
   }
 }
