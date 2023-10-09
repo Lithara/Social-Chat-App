@@ -16,13 +16,22 @@ class ProfilePage extends StatelessWidget {
             height: 90,
             alignment: Alignment.center,
           ),
+          SizedBox(
+            height: 24,
+          ),
           Text(
             'Lithara Perera',
             style: AppText.header2,
           ),
+          SizedBox(
+            height: 12,
+          ),
           Text(
             'Sri Lanka',
             style: AppText.subtitle3,
+          ),
+          SizedBox(
+            height: 24,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
