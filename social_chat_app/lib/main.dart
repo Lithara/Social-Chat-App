@@ -22,9 +22,9 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false, // remove debug banner
       home: LoginPage(),
-      //initialRoute: '/',
+      // initialRoute: '/',
       routes: {
-        '/': (context) => LoginPage(),
+        // '/': (context) => LoginPage(),
         '/home': (context) => HomePage(),
         '/main': (context) => MainPage(),
         '/edit_profile': (context) => EditProfilePage(),
