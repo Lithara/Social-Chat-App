@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:social_chat_app/config/app_routes.dart';
 import 'package:social_chat_app/pages/edit_profile_page.dart';
 import 'package:social_chat_app/pages/login_page.dart';
 import 'package:social_chat_app/pages/main_page.dart';
@@ -22,13 +23,8 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false, // remove debug banner
       home: LoginPage(),
-      // initialRoute: '/',
-      routes: {
-        // '/': (context) => LoginPage(),
-        '/home': (context) => HomePage(),
-        '/main': (context) => MainPage(),
-        '/edit_profile': (context) => EditProfilePage(),
-      },
+      initialRoute: AppRoutes.login,
+      routes: ,
     );
   }
 }
