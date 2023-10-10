@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false, // remove debug banner
       home: LoginPage(),
       initialRoute: AppRoutes.login,
-      routes: ,
+      routes: AppRoutes.pages,
     );
   }
 }
