@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:social_chat_app/components/post_item.dart';
+import 'package:social_chat_app/components/toolbar.dart';
 import 'package:social_chat_app/styles/app_colors.dart';
 import 'package:social_chat_app/styles/app_text.dart';
 
@@ -12,14 +14,15 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     mockUsersFromServer();
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: AppColors.background,
-        elevation: 0,
-        title: const Text('5 minute flutter'),
-        actions: const [
-          Icon(Icons.location_on_outlined),
+      appBar: ToolBar(
+        title: '5minuteFlutter',
+        actions: [
+          IconButton(
+            onPressed: (){},
+            icon: SvgPicture.asset('assets/svg/locationIcon.svg'),
+          ),  
         ],
-      ),
+      ), // 64
       body: ListView.separated(
         itemBuilder: (context, index) {
           return Postitem(

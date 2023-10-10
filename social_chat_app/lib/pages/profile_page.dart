@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:social_chat_app/components/toolbar.dart';
 import 'package:social_chat_app/styles/app_text.dart';
+
+enum ProfileMenu { 
+  edit, 
+  logout 
+}
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -8,6 +14,35 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: ToolBar(
+        title: 'Profile',
+        actions: [
+          PopupMenuButton<ProfileMenu>(
+            onSelected: (value) {
+              switch (value) {
+                case ProfileMenu.edit:
+                  print('Edit');
+                  break;
+                case ProfileMenu.logout:
+                  print('Logout');
+                  break;
+              }
+            },
+            itemBuilder: (context) {
+              return [
+                PopupMenuItem(
+                  child: Text('Edit'),
+                  value: ProfileMenu.edit,
+                ),
+                PopupMenuItem(
+                  child: Text('Logout'),
+                  value: ProfileMenu.logout,
+                ),
+              ];
+            }
+          )
+        ],
+      ),
       body: Column(
         children: [
           Image.asset(
