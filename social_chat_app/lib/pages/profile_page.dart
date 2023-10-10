@@ -45,11 +45,14 @@ class ProfilePage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Image.asset(
-            'assets/temp/Image.png',
-            width: 90,
-            height: 90,
-            alignment: Alignment.center,
+          ClipRRect(
+            borderRadius: BorderRadius.all(Radius.circular(180)),
+            child: Image.asset(
+              'assets/temp/Image.png',
+              width: 90,
+              height: 90,
+              alignment: Alignment.center,
+            ),
           ),
           SizedBox(
             height: 24,
