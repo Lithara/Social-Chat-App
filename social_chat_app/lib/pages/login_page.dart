@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:social_chat_app/config/app_routes.dart';
 import 'package:social_chat_app/config/app_strings.dart';
 
 import 'home_page.dart';
@@ -80,7 +81,7 @@ class LoginPage extends StatelessWidget {
                   height: 40,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.of(context).pushReplacementNamed('/main');
+                      Navigator.of(context).pushReplacementNamed(AppRoutes.main);
                     },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.amber,
