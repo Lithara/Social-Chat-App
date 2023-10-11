@@ -8,15 +8,27 @@ class EditProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       appBar: ToolBar(title: AppStrings.editProfile, actions: [],),
-      body: Column(
-        children: [
-          AppTextField(hint: AppStrings.firstName),
-          AppTextField(hint: AppStrings.lastName),
-          AppTextField(hint: AppStrings.phoneNumber),
-          AppTextField(hint: AppStrings.location),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          children: [
+            AppTextField(hint: AppStrings.firstName),
+            SizedBox(
+              height: 16,
+            ),
+            AppTextField(hint: AppStrings.lastName),
+            SizedBox(
+              height: 16,
+            ),
+            AppTextField(hint: AppStrings.phoneNumber),
+            SizedBox(
+              height: 16,
+            ),
+            AppTextField(hint: AppStrings.location),
+          ],
+        ),
       ),
     );
   }
