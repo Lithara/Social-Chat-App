@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false, // remove debug banner
       home: LoginPage(),
-      initialRoute: AppRoutes.login,
+      // initialRoute: AppRoutes.login,
       routes: AppRoutes.pages,
     );
   }
