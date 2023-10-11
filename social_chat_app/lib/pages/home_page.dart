@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:social_chat_app/components/post_item.dart';
 import 'package:social_chat_app/components/toolbar.dart';
+import 'package:social_chat_app/config/app_icons.dart';
+import 'package:social_chat_app/config/app_strings.dart';
 import 'package:social_chat_app/styles/app_colors.dart';
 import 'package:social_chat_app/styles/app_text.dart';
 
@@ -15,11 +17,11 @@ class HomePage extends StatelessWidget {
     mockUsersFromServer();
     return Scaffold(
       appBar: ToolBar(
-        title: '5minuteFlutter',
+        title: AppStrings.appName,
         actions: [
           IconButton(
             onPressed: (){},
-            icon: SvgPicture.asset('assets/svg/locationIcon.svg'),
+            icon: SvgPicture.asset(AppIcons.location),
           ),  
         ],
       ), // 64

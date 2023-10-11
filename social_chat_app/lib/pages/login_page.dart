@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:social_chat_app/config/app_icons.dart';
 import 'package:social_chat_app/config/app_routes.dart';
 import 'package:social_chat_app/config/app_strings.dart';
 
@@ -64,9 +65,7 @@ class LoginPage extends StatelessWidget {
                 Align(
                   alignment: Alignment.centerRight,
                   child: TextButton(
-                    onPressed: () {
-                      print('Forgot is clicked');
-                    },
+                    onPressed: () {},
                     style: TextButton.styleFrom(
                       foregroundColor: Colors.white,
                     ),
@@ -86,7 +85,7 @@ class LoginPage extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.amber,
                         foregroundColor: Colors.black),
-                    child: const Text('Login'),
+                    child: const Text(AppStrings.helloWelcome),
                   ),
                 ),
                 const Spacer(),
@@ -102,9 +101,7 @@ class LoginPage extends StatelessWidget {
                 SizedBox(
                   height: 40,
                   child: ElevatedButton(
-                    onPressed: () {
-                      print('Google is clicked');
-                    },
+                    onPressed: () {},
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
                       foregroundColor: Colors.black,
@@ -116,7 +113,7 @@ class LoginPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          'assets/images/google.png',
+                          AppIcons.google,
                           width: 20,
                           height: 20,
                         ),
@@ -134,9 +131,7 @@ class LoginPage extends StatelessWidget {
                 SizedBox(
                   height: 40,
                   child: ElevatedButton(
-                    onPressed: () {
-                      print('Facebook is clicked');
-                    },
+                    onPressed: () {},
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
                       foregroundColor: Colors.black,
@@ -148,7 +143,7 @@ class LoginPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          'assets/images/facebook.png',
+                          AppIcons.facebook,
                           width: 20,
                           height: 20,
                         ),
@@ -169,9 +164,7 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {
-                        print('Sign up is clicked');
-                      },
+                      onPressed: () {},
                       style: TextButton.styleFrom(
                         foregroundColor: Colors.amber,
                       ),

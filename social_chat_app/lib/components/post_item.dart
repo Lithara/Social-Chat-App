@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:social_chat_app/config/app_icons.dart';
 import 'package:social_chat_app/styles/app_text.dart';
 
 class Postitem extends StatelessWidget {
@@ -18,7 +19,7 @@ class Postitem extends StatelessWidget {
           Row(
             children: [
               Image.asset(
-                'assets/temp/Image.png',
+                AppIcons.user,
                 width: 40,
                 height: 40,
               ),
@@ -34,7 +35,7 @@ class Postitem extends StatelessWidget {
           SizedBox(
             height: 12,
           ),
-          Image.asset('assets/temp/post1.jpg'),
+          Image.asset(AppIcons.post),
           SizedBox(
             height: 12,
           ),

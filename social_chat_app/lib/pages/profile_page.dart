@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:social_chat_app/components/toolbar.dart';
+import 'package:social_chat_app/config/app_icons.dart';
+import 'package:social_chat_app/config/app_routes.dart';
+import 'package:social_chat_app/config/app_strings.dart';
 import 'package:social_chat_app/styles/app_text.dart';
 
 enum ProfileMenu { edit, logout }
@@ -12,12 +15,12 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: ToolBar(
-        title: 'Profile',
+        title: AppStrings.profile,
         actions: [
           PopupMenuButton<ProfileMenu>(onSelected: (value) {
             switch (value) {
               case ProfileMenu.edit:
-                Navigator.of(context).pushNamed('/edit_profile');
+                Navigator.of(context).pushNamed(AppRoutes.editProfile);
                 break;
               case ProfileMenu.logout:
                 print('Logout');
@@ -26,7 +29,7 @@ class ProfilePage extends StatelessWidget {
           }, itemBuilder: (context) {
             return [
               PopupMenuItem(
-                child: Text('Edit'),
+                child: Text(AppStrings.editProfile),
                 value: ProfileMenu.edit,
               ),
               PopupMenuItem(
@@ -42,7 +45,7 @@ class ProfilePage extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.all(Radius.circular(180)),
             child: Image.asset(
-              'assets/temp/Image.png',
+              AppIcons.user,
               width: 90,
               height: 90,
               alignment: Alignment.center,
@@ -74,7 +77,7 @@ class ProfilePage extends StatelessWidget {
                     '1.5K',
                     style: AppText.header2,
                   ),
-                  Text('Followers'),
+                  Text(AppStrings.followers),
                 ],
               ),
               Column(
@@ -83,7 +86,7 @@ class ProfilePage extends StatelessWidget {
                     '122',
                     style: AppText.header2,
                   ),
-                  Text('Posts'),
+                  Text(AppIcons.post),
                 ],
               ),
               Column(
@@ -92,7 +95,7 @@ class ProfilePage extends StatelessWidget {
                     '375',
                     style: AppText.header2,
                   ),
-                  Text('Following'),
+                  Text(AppStrings.following),
                 ],
               ),
             ],
